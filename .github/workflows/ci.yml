@@ -761,7 +761,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: dtolnay/rust-toolchain@cfcaf53ba4c621917ec7f78a66bff7a8848ddad4 # 1.85.0
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # 1.85.0
       # The committed lockfile is the tested graph: time 0.3.44 and proptest
       # 1.9.0 are the newest releases that still build on 1.85.
       - name: MSRV check (every feature, every target)
@@ -773,7 +773,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: dtolnay/rust-toolchain@2c76c034f9e32a5d6e2c104dc4df23a22476db04 # nightly
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # nightly
       # The authoritative check: the resolved public API, not a text scan.
       - name: Generate rustdoc JSON
         run: cargo +nightly rustdoc --locked --lib --all-features -- -Zunstable-options --output-format json
@@ -810,7 +810,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: dtolnay/rust-toolchain@2c76c034f9e32a5d6e2c104dc4df23a22476db04 # nightly
+      - uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # nightly
       - name: Install clang (libFuzzer runtime)
         run: sudo apt-get update && sudo apt-get install -y clang
       - name: Install cargo-fuzz

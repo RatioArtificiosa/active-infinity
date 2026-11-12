@@ -477,7 +477,7 @@ jobs:
       # conformance job used to rely on whatever the image happened to ship.
       # Pin it like every other toolchain in this workflow.
       - name: Set up Swift
-        uses: swift-actions/setup-swift@7ca6abe6b3b0e8b5421b88be48feee39cbf52c6a # v2.4.0
+        uses: swift-actions/setup-swift@364295d9c23900ce04d4e5cc708387921b4e50f9 # v3
         with:
           swift-version: "6.0"
       - name: Build the shared library
@@ -646,7 +646,7 @@ jobs:
       # toolchain has to be installed rather than hoped for: the runner image
       # stopped shipping `swiftc` and the Swift row failed as "not installed".
       - name: Set up Swift
-        uses: swift-actions/setup-swift@7ca6abe6b3b0e8b5421b88be48feee39cbf52c6a # v2.4.0
+        uses: swift-actions/setup-swift@364295d9c23900ce04d4e5cc708387921b4e50f9 # v3
         with:
           swift-version: "6.0"
       - name: Install scripting runtimes
